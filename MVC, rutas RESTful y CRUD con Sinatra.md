@@ -11,8 +11,7 @@ Ejecutamos el comando **`bundle install`** para instalar las gemas necesarias de
 ```ruby
 bundle install
 ```
-
-![Untitled](Actividad-Semana5%20a51478ab181044a6aed3863c7a831193/Untitled.png)
+![Alt text](Imagenes/Untitled.png)
 
 Luego, iniciamos el servidor de Sinatra utilizando el comando **`ruby template.rb`** o **`bundle exec ruby template.rb`**.
 
@@ -20,14 +19,14 @@ Luego, iniciamos el servidor de Sinatra utilizando el comando **`ruby template.r
 ruby template.rb
 ```
 
-![Untitled](Actividad-Semana5%20a51478ab181044a6aed3863c7a831193/Untitled%201.png)
+![Alt text](<Imagenes/Untitled 1.png>)
 
 Abrimos nuestro navegador web y verificamos que la aplicación estuviera funcionando correctamente visitando la siguiente URL [http://localhost:4567/todos](http://localhost:4567/todos)
 
-![Untitled](Actividad-Semana5%20a51478ab181044a6aed3863c7a831193/Untitled%202.png)
+![Alt text](<Imagenes/Untitled 2.png>)
 
 También utilizamos **`curl`** para realizar una solicitud GET y verificar la respuesta desde la línea de comandos:
 
-![Untitled](Actividad-Semana5%20a51478ab181044a6aed3863c7a831193/Untitled%203.png)
+![Alt text](<Imagenes/Untitled 3.png>)
 
 # **Parte 1**
