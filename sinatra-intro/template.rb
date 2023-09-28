@@ -103,5 +103,14 @@ end
 # 				otherwise render json with msg set to "delete failure"
 # hint: Todo class has instance method destroy
 delete '/todos/:id' do
-  ### TU CODIGO AQUI ###
+  content_type :json
+  todo = Todo.find_by_id(params[:id])
+
+  if todo
+    todo.destroy
+    return { msg: "delete success" }.to_json
+  else
+    status 404 # Not Found
+    return { msg: "delete failure" }.to_json
+  end
 end
