@@ -87,9 +87,17 @@ end
 # 				otherwise render json with msg set to "update failure"
 # hint: Todo class has instance method update_attribute
 put '/todos/:id' do
-  ### TU CODIGO AQUI ###
-end
+  content_type :json
+  todo = Todo.find_by_id(params[:id])
 
+  if todo && !params[:description].nil? && !params[:description].empty?
+    todo.update(description: params[:description])
+    return { msg: "update success" }.to_json
+  else
+    status 400 # Bad Request
+    return { msg: "update failure" }.to_json
+  end
+end
 # delete a todo
 # return: if todo with specified id exist, render json with msg set to "delete success"
 # 				otherwise render json with msg set to "delete failure"
