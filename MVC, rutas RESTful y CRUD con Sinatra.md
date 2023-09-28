@@ -82,6 +82,8 @@ Para comprender mejor las rutas y acciones, es importante conocer los componente
 
 En Sinatra, el enrutamiento y el controlador están acoplados, lo que facilita la declaración de rutas. Declaramos algunas rutas RESTful para que podamos ver una lista de tareas pendientes, crear una tarea pendiente, editar una tarea pendiente y eliminar una tarea pendiente. **¿Qué acciones RESTful deberíamos utilizar para estos?**
 
+Las acciones RESTful que deberiamos utilizar para estas rutas son las siguientes:
+
 1. Ver tareas pendientes:
     - Método GET: **`/todos`**
 2. Crear tarea pendiente:
@@ -92,6 +94,7 @@ En Sinatra, el enrutamiento y el controlador están acoplados, lo que facilita l
 4. Eliminar tarea pendiente:
     - Método DELETE: **`/todos/:id`**
 
+Estas son las rutas y métodos HTTP que utilizamos en nuestra aplicación Sinatra para gestionar nuestras tareas pendientes de manera efectiva.
 # **Parte 3**
 
 Dado que HTTP es un protocolo RESTful, cada solicitud debe ir seguida de una respuesta, por lo que debemos devolver una vista o redirigir a cada solicitud. Usaremos JSON para las respuestas, que es similar a lo que hacen muchas API. ¿Hacia dónde debería ir la respuesta?.
