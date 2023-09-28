@@ -1,6 +1,3 @@
-# Actividad-Semana5
-
-Status: Not started
 
 # **Demostración de MVC, rutas RESTful y CRUD con Sinatra**
 
