@@ -70,8 +70,16 @@ end
 # hint: use method Todo's class method create
 post '/todos' do
   content_type :json
-  todo = 
-  ### TU CODIGO AQUI
+  request_body = JSON.parse(request.body.read)
+
+  if request_body['description'].nil? || request_body['description'].empty?
+    status 400 # Bad Request
+    return { msg: "error: description can't be blank" }.to_json
+  else
+    todo = Todo.create(description: request_body['description'])
+    status 201 # Created
+    return { msg: "create success" }.to_json
+  end
 end
 
 # update a todo
